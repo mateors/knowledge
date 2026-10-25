@@ -92,5 +92,6 @@ To go from absolute beginner to deploying FRR in your public cloud stack, execut
 * https://docs.vyos.io/en/rolling/configuration/system/frr.html
 * [Introduction to FRRouting - Tutorial](https://www.youtube.com/watch?v=NxP9lBvoawE)
 * [Free Range Routing (FRR)](https://www.youtube.com/watch?v=y1ikVKvWXpQ)
+* [SR-MPLS on Linux with FRR and OSPF](https://www.youtube.com/watch?v=N-U2w6OUQWI)
 * [Playlist: Introduction to FRRouting](https://www.youtube.com/playlist?list=PLpGUHIaIbdl-_uil_4z10Pk32I3U5JKPR)
 
