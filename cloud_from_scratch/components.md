@@ -28,8 +28,7 @@ To provide your engineering team with a seamless, zero-ambiguity handbook, this 
 
 ## Recommended Deployment Roadmap
 1. Local Hypervisor Prototyping: Extract the Go virtualization orchestrator block from Section 5 onto a test server running Ubuntu Server 24.04 LTS or Debian 12 with hardware virtualization (VT-x/AMD-V) turned on. Run the code locally to ensure your script interfaces correctly with the libvirt socket and local Linux bridge configurations.
-2. Peering Simulations: Use Containerlab or GNS3 to spin up virtual instances of FRRouting alongside your Go daemons. Simulate BGP advertisements, policy route-maps, and prefix distribution inside a private ASN block before connecting your production infrastructure to physical upstream ISP loops.
-3. State Consolidation: Use the thread-safe, atomic Couchbase KV setup from Section 2 as the central backing registry for your IPAM subnets and node scheduling queues. This ensures your microservices avoid race conditions when concurrently leasing out public IP addresses to new virtual instances.
-As you push this integrated blueprint into your development pipeline, let me know if you would like to:
-• Expand this documentation with REST API Endpoint structures (using frameworks like Gin or Fiber) to expose these Go cloud orchestrations over a secure web management panel.
-• Design a specialized monitoring sub-module detailing how to extract real-time bandwidth and packet metrics per VXLAN interface using Prometheus and Go network telemetry libraries.
+   
+3. Peering Simulations: Use Containerlab or GNS3 to spin up virtual instances of FRRouting alongside your Go daemons. Simulate BGP advertisements, policy route-maps, and prefix distribution inside a private ASN block before connecting your production infrastructure to physical upstream ISP loops.
+   
+5. State Consolidation: Use the thread-safe, atomic Couchbase KV setup from Section 2 as the central backing registry for your IPAM subnets and node scheduling queues. This ensures your microservices avoid race conditions when concurrently leasing out public IP addresses to new virtual instances.
