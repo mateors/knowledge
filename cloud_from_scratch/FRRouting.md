@@ -3,33 +3,32 @@
 FRRouting (FRR) is an open-source, high-performance, internet-scale routing software suite for Linux and Unix platforms. It is a direct fork of the historical Quagga routing engine.
 FRR turns a standard Linux server into an enterprise-grade, bare-metal hardware router. Instead of buying expensive proprietary routing hardware from vendors like Cisco or Juniper, companies like Amazon, Slack, and cloud providers run FRR directly on commodity white-box servers to drive their massive data center networks.
 
-Core Architecture: The Multi-Daemon Design
-
+## Core Architecture: The Multi-Daemon Design
 Unlike traditional routing software that runs as a single, bloated process, FRR implements a highly resilient multi-daemon architecture. Every routing protocol runs inside its own isolated operating system process.
-* zebra (The Core Engine): The master coordinator daemon. It does not calculate routes itself; instead, it manages the underlying Linux kernel routing tables, handles interface states, and acts as the broker between all protocol-specific daemons.
-* Protocol Daemons: Separate processes dedicated entirely to specific math and state tracking for individual protocols:
+
+* *zebra* (The Core Engine): The master coordinator daemon. It does not calculate routes itself; instead, it manages the underlying Linux kernel routing tables, handles interface states, and acts as the broker between all protocol-specific daemons.
+* *Protocol Daemons*: Separate processes dedicated entirely to specific math and state tracking for individual protocols:
 	* bgpd: Handles Border Gateway Protocol (BGP-4 and BGP-4+).
 	* ospfd / ospf6d: Handles Open Shortest Path First (IPv4 & IPv6).
 	* isisd: Handles Intermediate System to Intermediate System routing.
 	* pbrd: Handles Policy-Based Routing.
 	* staticd: Manages local static routes.
-* The Resilience Benefit: If the ospfd process encounters a memory bug and crashes, your BGP sessions (bgpd) keep running entirely uninterrupted while the OS restarts the OSPF daemon.
+* The Resilience Benefit: If the ospfd process encounters a memory bug and crashes, your BGP sessions (`bgpd`) keep running entirely uninterrupted while the OS restarts the OSPF daemon.
 
-Essential Protocols to Master inside FRR
-
+## Essential Protocols to Master inside FRR
 When building a custom cloud provider network (like your LxRoot infrastructure), you do not need to learn every feature. Focus intensely on these three pillars:
 
-1. BGP (Border Gateway Protocol) via bgpd
+1. *BGP* (Border Gateway Protocol) via bgpd
 
 * What it does: Connects separate networks (Autonomous Systems) together. It is the core routing engine of the global internet.
 * Cloud Context: You will use this to peer your cluster with your upstream ISPs, announcing your custom APNIC ASN and your public IPv4/IPv6 address blocks so the global internet knows how to send traffic to your servers.
 
-2. EVPN-VXLAN (Ethernet VPN)
+2. *EVPN-VXLAN* (Ethernet VPN)
 
 * What it does: An extension of BGP that allows you to stretch an isolated Layer 2 network (a virtual switch/VLAN) across a physical Layer 3 routed underlay network.
 * Cloud Context: This is how you allow a customer's VM on Hypervisor Node 1 to talk directly (via private MAC addresses) to their other VM on Hypervisor Node 5 without passing through an external router.
 
-3. OSPF / IS-IS via ospfd / isisd
+3. *OSPF* / IS-IS via ospfd / isisd
 
 * What it does: Interior Gateway Protocols (IGPs). They find the fastest path between routers inside your own internal data center data plane.
 * Cloud Context: Used to dynamically map out paths between your Top-of-Rack physical switches and your internal bare-metal hypervisor nodes.
