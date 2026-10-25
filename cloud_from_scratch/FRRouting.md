@@ -89,4 +89,6 @@ To go from absolute beginner to deploying FRR in your public cloud stack, execut
 ## Learning Resource
 * https://frrouting.org/doc/
 * https://github.com/FRRouting/frr
+* [Introduction to FRRouting - Tutorial](https://www.youtube.com/watch?v=NxP9lBvoawE)
+* [Playlist: Introduction to FRRouting](https://www.youtube.com/playlist?list=PLpGUHIaIbdl-_uil_4z10Pk32I3U5JKPR)
 
