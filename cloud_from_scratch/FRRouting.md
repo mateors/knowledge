@@ -87,8 +87,10 @@ To go from absolute beginner to deploying FRR in your public cloud stack, execut
 * Goal: Instead of manually typing commands into vtysh, write a Go service that acts as an orchestration engine. Your Go code will dynamically write configuration templates or interact with FRR's underlying APIs (like gRPC or Netlink structures) to create network channels automatically whenever a new customer requests a public IP address block.
 
 ## Learning Resource
-* https://frrouting.org/doc/
+* https://docs.frrouting.org/en/latest/
 * https://github.com/FRRouting/frr
+* https://docs.vyos.io/en/rolling/configuration/system/frr.html
 * [Introduction to FRRouting - Tutorial](https://www.youtube.com/watch?v=NxP9lBvoawE)
+* [Free Range Routing (FRR)](https://www.youtube.com/watch?v=y1ikVKvWXpQ)
 * [Playlist: Introduction to FRRouting](https://www.youtube.com/playlist?list=PLpGUHIaIbdl-_uil_4z10Pk32I3U5JKPR)
 
