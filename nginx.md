@@ -6,19 +6,19 @@
 
 > sudo apt install -y curl gnupg2 ca-certificates lsb-release ubuntu-keyring
 
-``curl
+```shell
 curl -fsSL https://nginx.org/keys/nginx_signing.key \
     | sudo gpg --dearmor --yes \
         -o /usr/share/keyrings/nginx-archive-keyring.gpg
 ```
 
-```
+```shell
 gpg --dry-run --quiet --no-keyring \
     --import --import-options import-show \
     /usr/share/keyrings/nginx-archive-keyring.gpg
 ```
 
-```
+```shell
 echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/ubuntu noble nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list
 ```
