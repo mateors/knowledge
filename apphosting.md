@@ -57,4 +57,12 @@ WantedBy=multi-user.target
 ### systemd reload
 > `systemctl daemon-reload`
 
-if everything alright now you should see the url https://workflow.lxroot.com (https because of cloudflare dns proxy used)
+## Check your application status or start|stop|restart
+```shell
+systemctl start workflow.lxroot.com
+systemctl stop workflow.lxroot.com
+systemctl restart workflow.lxroot.com
+systemctl status workflow.lxroot.com
+```
+
+> If everything alright now you should see the url https://workflow.lxroot.com (https because of cloudflare dns proxy used)
