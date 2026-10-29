@@ -7,13 +7,16 @@
 ### How to generate passing using linux shell
 > openssl passwd -6 'YourPassword'
 
+## Add group
+> mkdir -p /opt/mateors/admin
 
 ```shell
 useradd -d "/opt/mateors/admin" -G "mateors" -s "/bin/false" -p $(openssl passwd -6 YourPassword) -c "mat user" "matadmin"
 ```
 
+## Allow nginx to access files owned by the mateors group 
 ```
-usermod -aG mateors www-data nginx
+usermod -aG mateors nginx
 ```
 
 ### Make directory for setup virtual hosting for `workflow.lxroot.com`
