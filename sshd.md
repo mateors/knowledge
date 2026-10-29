@@ -67,5 +67,6 @@ sshd -T -C user=cc-licensingcom,host=localhost,addr=127.0.0.1 \
 > ls -ld /var/www/vhosts/workflow.lxroot.com/public_html
 
 ## Now you can login from any windows or linux terminal using
-> `sftp` workflowlxrootcom@`SERVERIP`\n
+> `sftp` workflowlxrootcom@`SERVERIP`
+
 YourPassword
