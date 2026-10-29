@@ -34,9 +34,14 @@ printf 'Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 9
 
 > `nginx -V`
 
+```shell
 sudo nginx -t
 sudo systemctl restart nginx
 sudo systemctl enable nginx
+```
 
+## How do you monitor nginx logs
+```shell
 sudo systemctl status nginx --no-pager
 sudo nginx -t
+```
