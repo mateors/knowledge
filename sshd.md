@@ -57,7 +57,7 @@ sshd -t
 
 ### Verify
 ```shell
-sshd -T -C user=cc-licensingcom,host=localhost,addr=127.0.0.1 \
+sshd -T -C user=workflowlxrootcom,host=localhost,addr=127.0.0.1 \
   | grep -E '^(passwordauthentication|chrootdirectory|forcecommand|allowtcpforwarding|x11forwarding) '
 ```
 
