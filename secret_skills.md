@@ -3,7 +3,7 @@ Developing these four traits together creates a powerful feedback loop. When you
 
 Here is a **practical framework** to **build each of these habits** into your **daily life**.
 
-1. Become High Agency
+1. **Become High Agency**
 High agency is the refusal to accept passive circumstances as final. Low-agency people look at a problem and ask, `Why is this happening to me?` High-agency people ask, `How do I get around this?`
 
 * **Default to action over permission:** Stop waiting for someone to assign you a task or tell you the **right** way to do something. Start building, writing, or testing first, and ask for feedback on something tangible.
@@ -23,7 +23,7 @@ Idea generation is a volume game, not a lightning strike. The best way to have a
 Resilience is not about avoiding pain or stress; it is about shortening your recovery time.
 
 * **Separate identity from outcomes:** When a project fails or you get rejected, view it as data, not a verdict on your worth. You didn't fail; an experiment produced an unexpected result.
-* Practice voluntary discomfort: Regularly do hard things on purpose so that unexpected hardship feels familiar. Cold showers, intense workouts, fasting, or having difficult conversations train your nervous system to stay calm under pressure.
+* **Practice voluntary discomfort:** Regularly do hard things on purpose so that unexpected hardship feels familiar. Cold showers, intense workouts, fasting, or having difficult conversations train your nervous system to stay calm under pressure.
 * **Run a "Pre-Mortem":** Before starting something important, imagine it is six months in the future and the project has completely failed. Write down all the reasons why. By anticipating the worst-case scenarios early, you remove their shock value and can build safeguards now.
 * **Focus strictly on the next micro-step:** When things go wrong, looking at the whole mountain causes paralysis. Shrink your time horizon. Ask yourself, "What is the single most useful thing I can do in the next 15 minutes?" and only do that.
 
